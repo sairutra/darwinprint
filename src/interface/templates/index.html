@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Voting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 0;
+        }
+        .image-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .vote-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;  /* Adds space between the image and the button */
+            transition: background-color 0.3s ease;
+        }
+        .vote-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 1">
+        <button class="vote-btn" onclick="vote(1)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 2">
+        <button class="vote-btn" onclick="vote(2)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 3">
+        <button class="vote-btn" onclick="vote(3)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 4">
+        <button class="vote-btn" onclick="vote(4)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 5">
+        <button class="vote-btn" onclick="vote(5)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 6">
+        <button class="vote-btn" onclick="vote(6)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 7">
+        <button class="vote-btn" onclick="vote(7)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 8">
+        <button class="vote-btn" onclick="vote(8)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 9">
+        <button class="vote-btn" onclick="vote(9)">Vote</button>
+    </div>
+    <div class="image-container">
+        <img src="https://i.etsystatic.com/23297397/r/il/f2dee4/3110451573/il_fullxfull.3110451573_aaje.jpg" alt="Image 10">
+        <button class="vote-btn" onclick="vote(10)">Vote</button>
+    </div>
+
+    <script>
+        function vote(imageNumber) {
+						// Prepare the data to be sent in the POST request
+						const data = { imageNumber: imageNumber };
+
+						// Send the vote data to the Flask server using the Fetch API
+						fetch('/vote', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							body: JSON.stringify(data)
+						})
+						.then(response => response.json())  // Parse JSON response from Flask
+						.then(result => {
+							if (result.status === 'success') {
+								alert(result.message);  // Show the success message
+								console.log('Updated votes:', result.votes);  // Optionally log the updated votes
+							} else {
+								alert(result.message);  // Show the error message
+							}
+						})
+						.catch(error => {
+							console.error('Error:', error);
+							alert('An error occurred while voting!');
+						});
+						}
+			
+    </script>
+
+</body>
+</html>
