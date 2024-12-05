@@ -27,4 +27,6 @@ parameter for the ranking, admin platform
 
 put logic in python versus grasshopper? 
 
-one computer -> votes on ranking basis -> logic in rhino -> render -> output gif in next round 
+one computer -> votes on ranking basis -> logic in rhino -> render -> output gif in next round
+
+look into detecting the parameters in the first round before evolution starts
