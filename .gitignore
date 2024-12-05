@@ -147,6 +147,7 @@ cython_debug/
 
 # Custom
 *\output\votes.json
+output
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
