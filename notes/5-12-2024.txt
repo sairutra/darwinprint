@@ -38,4 +38,6 @@ Sebas Evolution scatch:
     - You can make a "list"
   - Make sure to have the correct numbers in the right order for each parent.
 
-
+Grashopper:
+  Concat >> to get values on one line
+  
