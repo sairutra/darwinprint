@@ -30,3 +30,12 @@ put logic in python versus grasshopper?
 one computer -> votes on ranking basis -> logic in rhino -> render -> output gif in next round
 
 look into detecting the parameters in the first round before evolution starts
+
+
+Sebas Evolution scatch:
+  - Can we create one combined parent pool? -> independent of Mother or Father the pool can be combined.
+  - Select only 3 parent groups
+    - You can make a "list"
+  - Make sure to have the correct numbers in the right order for each parent.
+
+
