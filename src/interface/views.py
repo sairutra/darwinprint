@@ -1,5 +1,9 @@
 from flask import Blueprint, render_template, request, jsonify
 import json
+import rhinoinside
+rhinoinside.load()
+import Rhino
+import scriptcontext
 import os
 from datetime import datetime
 
@@ -28,7 +32,7 @@ def vote():
         # Read the current votes from the JSON file
         with open(VOTE_FILE, 'r') as file:
             votes = json.load(file)
-        
+
         # Create a new vote entry
         new_vote = {
             'imageNumber': image_number,
@@ -41,7 +45,7 @@ def vote():
         # Write the updated votes back to the file
         with open(VOTE_FILE, 'w') as file:
             json.dump(votes, file, indent=4)
-        
+
         return jsonify({'status': 'success', 'message': f'You voted for Image {image_number}!'})
 
     else:
