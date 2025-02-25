@@ -158,5 +158,6 @@ output
 
 
 .DS_Store
-
+open_in_grasshopper/darwinOutput
+open_in_grasshopper\darwinOutput
 darwinOutput
