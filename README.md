@@ -56,11 +56,11 @@ Download as ZIP and unpack:
 ### 3. Activate Rhino Control Panel
 In Grasshopper:
 - **Mac**: `View > Remote Control Panel`
-- **Win**: `???`
+- **Win**: `View > Remote Control Panel`
 
 In Rhino:
 - **Mac**: `Window > Container > Grasshopper`
-- **Win**: `???`
+- **Win**: `Window > Container > Grasshopper`
 
 ## How to Use
 
@@ -78,8 +78,8 @@ In Rhino:
 - If the model preview of Gen 0 is missing, click **"Reload Evolution"** and **"Delete Evolution"**.
 
 #### How do I change the size of the plane grid?
-- **Mac**: `File > Settings > Grid > Grid line count`
-- **Win**: `???`
+- **Mac**: `File > Settings > Grid > Grid Line Count`
+- **Win**: `File > Grid > Grid Properties > Grid Line Count`
 - A value of **3000** should be sufficient.
 
 ---
