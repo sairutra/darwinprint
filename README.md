@@ -146,7 +146,7 @@ In the **"Dynamic Labels"** group, disable the preview for **"TextSrf"** (groupe
 Contributions are welcome! Please follow the standard [GitHub Flow](https://guides.github.com/introduction/flow/) for submitting pull requests. If you find a bug or have a feature request, open an issue in the [issue tracker](https://github.com/sairutra/darwinprint/issues).
 
 ## **License**
--
+-   This project uses the MIT license
 
 ## **Contact**
 For questions or collaboration opportunities, please reach out via [GitHub Issues](https://github.com/sairutra/darwinprint/issues).
